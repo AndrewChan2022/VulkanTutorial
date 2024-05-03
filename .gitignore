@@ -1,6 +1,7 @@
 *.html
 ads.txt
 
+code/build
 **/_out/*
 **/.vscode/*
 .DS_Store
