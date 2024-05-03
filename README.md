@@ -1,3 +1,40 @@
+
+Usage
+===============
+
+windows platform
+
+      1. git clone --depth 1 https://github.com/AndrewChan2022/VulkanTutorial
+      2. generate code/build by cmake
+      3. or open code/build/VulkanTutorial.sln
+      4. if open exist vs project, right path should be:
+         D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build
+
+bugfix
+      
+      project background:
+         1. working dir is $(ProjectDir) 
+         2. each project also has helper project to build shaders to dir  projectname/shaders/xxx 
+
+      bugs:
+         1. shader path    : shaders/xxx  -> projectname/shaders/xxx 
+         2. texture path   : textures/xxx -> projectname/textures/xxx
+         3. model path     : models/xxx   -> projectname/models/xxx
+
+demo prj:
+
+      15_hello_triangle       basic
+      21_index_buffer         vbo/ibo
+      23_descriptor_sets      ubo/dspool/dssetlayout/dsset
+      26_texture_mapping      texture/sampler/dsset
+      27_depth_buffering      depth
+      28_model_loading        obj model
+      29_mipmapping
+      30_multisampling
+      31_compute_shader
+
+
+
 Vulkan tutorial
 ===============
 
