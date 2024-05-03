@@ -34,6 +34,11 @@ demo prj:
       31_compute_shader
 
 
+cmake bugfix:
+
+      1. include dependency code as subdir
+      2. code/cmake/modules define find package just like learn opengl repo
+
 
 Vulkan tutorial
 ===============
