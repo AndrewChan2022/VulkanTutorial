@@ -12,6 +12,7 @@
 #include <limits>
 #include <optional>
 #include <set>
+#include <filesystem>
 
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
@@ -386,8 +387,9 @@ private:
     }
 
     void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("shaders/vert.spv");
-        auto fragShaderCode = readFile("shaders/frag.spv");
+        
+        auto vertShaderCode = readFile("12_graphics_pipeline_complete/shaders/vert.spv");
+        auto fragShaderCode = readFile("12_graphics_pipeline_complete/shaders/frag.spv");
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
         VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
@@ -673,6 +675,11 @@ private:
 
     static std::vector<char> readFile(const std::string& filename) {
         std::ifstream file(filename, std::ios::ate | std::ios::binary);
+
+        // solution dir
+        std::filesystem::path pwd = std::filesystem::current_path();
+        std::cout << pwd << std::endl;
+
 
         if (!file.is_open()) {
             throw std::runtime_error("failed to open file!");

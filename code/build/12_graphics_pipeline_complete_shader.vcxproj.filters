@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\02a49b8034135fbda7d37c0c74595820\shaders.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\bc5088ab4e9f8eba33cd6e7734484a89\frag.spv.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\7746850162e6e1c71ef6e604e7e81d5f\12_graphics_pipeline_complete_shader.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\12_graphics_pipeline_complete_shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{611238E0-6F79-30E3-8327-05E00CA19C42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

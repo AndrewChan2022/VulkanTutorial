@@ -7,7 +7,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include "stb_image.h"
 
 #include <iostream>
 #include <fstream>
@@ -22,6 +22,15 @@
 #include <array>
 #include <optional>
 #include <set>
+
+#define NOMINMAX
+#include <filesystem>
+#ifdef _WIN32
+#include <windows.h>    //GetModuleFileNameW
+#else
+#include <limits.h>
+#include <unistd.h>     //readlink
+#endif
 
 const uint32_t WIDTH = 800;
 const uint32_t HEIGHT = 600;
@@ -608,8 +617,8 @@ private:
     }
 
     void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("shaders/vert.spv");
-        auto fragShaderCode = readFile("shaders/frag.spv");
+        auto vertShaderCode = readFile("27_depth_buffering/shaders/vert.spv");
+        auto fragShaderCode = readFile("27_depth_buffering/shaders/frag.spv");
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
         VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
@@ -801,9 +810,24 @@ private:
         return format == VK_FORMAT_D32_SFLOAT_S8_UINT || format == VK_FORMAT_D24_UNORM_S8_UINT;
     }
 
+    std::filesystem::path getexepath() {
+#ifdef _WIN32
+        wchar_t path[MAX_PATH] = { 0 };
+        GetModuleFileNameW(NULL, path, MAX_PATH);
+        return path;
+#else
+        char result[PATH_MAX];
+        ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
+        return std::string(result, (count > 0) ? count : 0);
+#endif
+    }
+
     void createTextureImage() {
+
+        auto exepath = getexepath();
+        printf("exepath:%s\n", exepath.string().c_str());
         int texWidth, texHeight, texChannels;
-        stbi_uc* pixels = stbi_load("textures/texture.jpg", &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+        stbi_uc* pixels = stbi_load("27_depth_buffering/textures/texture.jpg", &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
         VkDeviceSize imageSize = texWidth * texHeight * 4;
 
         if (!pixels) {
@@ -1564,12 +1588,14 @@ private:
 int main() {
     HelloTriangleApplication app;
 
-    try {
+    app.run();
+
+    /*try {
         app.run();
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;
-    }
+    }*/
 
     return EXIT_SUCCESS;
 }

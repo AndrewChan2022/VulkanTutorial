@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\c416c8a48d395b22f29ff92bfed2cebf\shaders.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\8bf2addf3cdbff0334a3e4e88609d8ff\frag.spv.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\7746850162e6e1c71ef6e604e7e81d5f\15_hello_triangle_shader.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\15_hello_triangle_shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{611238E0-6F79-30E3-8327-05E00CA19C42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

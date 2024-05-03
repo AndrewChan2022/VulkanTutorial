@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\c2adcc60b0398644f2a012508365a1c7\shaders.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\d271d7e8cb87c4a691b2d2481b628193\frag.spv.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\7746850162e6e1c71ef6e604e7e81d5f\26_texture_mapping_shader.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\data\vulkan\VulkanTutorial-main\VulkanTutorial-main\code\build\CMakeFiles\26_texture_mapping_shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{611238E0-6F79-30E3-8327-05E00CA19C42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

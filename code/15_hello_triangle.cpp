@@ -423,8 +423,8 @@ private:
     }
 
     void createGraphicsPipeline() {
-        auto vertShaderCode = readFile("shaders/vert.spv");
-        auto fragShaderCode = readFile("shaders/frag.spv");
+        auto vertShaderCode = readFile("15_hello_triangle/shaders/vert.spv");
+        auto fragShaderCode = readFile("15_hello_triangle/shaders/frag.spv");
 
         VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
         VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
@@ -891,12 +891,14 @@ private:
 int main() {
     HelloTriangleApplication app;
 
-    try {
+    app.run();
+
+    /*try {
         app.run();
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;
-    }
+    }*/
 
     return EXIT_SUCCESS;
 }
